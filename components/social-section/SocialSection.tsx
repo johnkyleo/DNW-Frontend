@@ -5,11 +5,6 @@ import testimonialPhoto1 from '@/public/testimonial-photo-1.png';
 import testimonialPhoto2 from '@/public/testimonial-photo-2.png';
 import testimonialPhoto3 from '@/public/testimonial-photo-3.png';
 import testimonialPhoto4 from '@/public/testimonial-photo-4.png';
-import redVectorMb from '@/public/social-red-mb.png';
-import redVectorMd from '@/public/social-red-md.png';
-import redVectorLg from '@/public/social-red-lg.png';
-import yellowVectorMd from '@/public/social-yellow-md.png'
-import yellowVectorLg from '@/public/social-yellow-lg.png'
 import Card from './Card';
 import { CardProps } from './Card';
 
@@ -57,19 +52,8 @@ const testimonialsData: CardProps[] = [
 ]
 
 const SocialSection = () => (
-  <>
     <section className='relative h-max lg: social-bg-container' id='fanzone'>
-      {/* red vector mobile */}
-      <img src={redVectorMb.src} alt="Red Vector" className='md:hidden absolute bottom-0 left-0' />
-      {/* red vector md */}
-      <img src={redVectorMd.src} alt="Red Vector" className='hidden md:block lg:hidden absolute bottom-0 left-0' />
-      {/* red vector lg */}
-      <img src={redVectorLg.src} alt="Red Vector" className='hidden lg:block absolute bottom-0 left-0' />
-      {/* yellow vector md */}
-      <img src={yellowVectorMd.src} alt="Yellow Vector" className='hidden md:block lg:hidden absolute bottom-0 right-0' />
-      {/* yellow vector lg */}
-      <img src={yellowVectorLg.src} alt="Yellow Vector" className='hidden lg:block absolute bottom-0 right-0' />
-
+      
       <motion.div
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -124,7 +108,7 @@ const SocialSection = () => (
         <div className='absolute w-full bottom-0 h-[211px] bg-gradient-to-b from-black/0 to-black/100' />
       </div>
     </section>
-  </>
+  
 );
 
 export default SocialSection;
