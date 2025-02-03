@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import { Navigation, Pagination, A11y } from 'swiper/modules';
+import Image from 'next/image';
 
 // Import images
 import spotlightBg from '../public/spotlight_bg.png';
@@ -29,16 +30,16 @@ const SpotlightSection: FC = () => {
       >
         <div className="min-w-screen h-full inset-0 bg-black opacity-80 bg-cover" />
       </div>
-
+      
       {/* Red Vectors */}
-      <img
-        src={red1.src}
+      <Image
+        src={red1}
         className="absolute bottom-[-200px] left-0 w-[400px] h-[400px] lg:w-[649px] lg:h-[660px] opacity-80 hidden lg:block"
         alt="Red Vector"
       />
       
-      <img
-        src={red2.src}
+      <Image
+        src={red2}
         className="absolute top-0 right-[-100px] w-[300px] h-[300px] lg:w-auto lg:h-[1200px] opacity-80 object-cover overflow-hidden hidden lg:block"
         alt="Red Vector"
       />
@@ -64,8 +65,8 @@ const SpotlightSection: FC = () => {
           {/* Image 1 */}
           <motion.div whileHover={{ scale: 1.05 }} className="group relative">
             <a href="https://www.youtube.com/watch?v=Xenstc6mHWs" target="_blank" rel="noopener noreferrer">
-              <img
-                src={img1.src}
+              <Image
+                src={img1}
                 className="w-full h-auto rounded-md group-hover:brightness-75 transition-all"
                 alt="Deadpool & Wolverine Stars"
               />
@@ -78,8 +79,8 @@ const SpotlightSection: FC = () => {
           {/* Image 2 */}
           <motion.div whileHover={{ scale: 1.05 }} className="group relative">
             <a href="https://www.youtube.com/watch?v=Y3mV4g3ReMk" target="_blank" rel="noopener noreferrer">
-              <img
-                src={img2.src}
+              <Image
+                src={img2}
                 className="w-full h-auto rounded-md group-hover:brightness-75 transition-all"
                 alt="Interviewing Donny and Cong"
               />
@@ -92,8 +93,8 @@ const SpotlightSection: FC = () => {
           {/* Image 3 */}
           <motion.div whileHover={{ scale: 1.05 }} className="group relative">
             <a href="https://www.youtube.com/watch?v=ca6-AbCD_WY" target="_blank" rel="noopener noreferrer">
-              <img
-                src={img3.src}
+              <Image
+                src={img3}
                 className="w-full h-auto rounded-md group-hover:brightness-75 transition-all"
                 alt="Puppies Interview"
               />
@@ -107,8 +108,8 @@ const SpotlightSection: FC = () => {
           <motion.div whileHover={{ scale: 1.05 }} className="group relative">
             <a href="https://www.youtube.com/watch?v=L6y8viGzWhI" target="_blank" rel="noopener noreferrer">
               <div className="relative">
-                <img
-                  src={img4.src}
+                <Image
+                  src={img4}
                   className="w-full h-auto rounded-md group-hover:brightness-75 transition-all"
                   alt="MTV Interview"
                 />
@@ -149,7 +150,7 @@ const SpotlightSection: FC = () => {
           >
             <SwiperSlide>
               <a href="https://www.youtube.com/watch?v=Xenstc6mHWs" target="_blank" rel="noopener noreferrer">
-                <img src={img1.src} className="w-full h-auto rounded-md" alt="Deadpool & Wolverine Stars" />
+                <Image src={img1} className="w-full h-auto rounded-md" alt="Deadpool & Wolverine Stars" />
               </a>
               <h3 className="font-bebas text-2xl mt-2 text-[#d3d3d3] text-center">
                 The stars of 'Deadpool & Wolverine' take Vanity Fair's infamous lie detector test.
@@ -158,7 +159,7 @@ const SpotlightSection: FC = () => {
 
             <SwiperSlide>
               <a href="https://www.youtube.com/watch?v=Y3mV4g3ReMk" target="_blank" rel="noopener noreferrer">
-                <img src={img2.src} className="w-full h-auto rounded-md" alt="Interviewing Donny and Cong" />
+                <Image src={img2} className="w-full h-auto rounded-md" alt="Interviewing Donny and Cong" />
               </a>
               <h3 className="font-bebas text-2xl mt-2 text-[#d3d3d3] text-center">
                 Interviewing Deadpool & Wolverine's main guys with Donny and Cong.
@@ -167,7 +168,7 @@ const SpotlightSection: FC = () => {
 
             <SwiperSlide>
               <a href="https://www.youtube.com/watch?v=ca6-AbCD_WY" target="_blank" rel="noopener noreferrer">
-                <img src={img3.src} className="w-full h-auto rounded-md" alt="Puppies Interview" />
+                <Image src={img3} className="w-full h-auto rounded-md" alt="Puppies Interview" />
               </a>
               <h3 className="font-bebas text-2xl mt-2 text-[#d3d3d3] text-center">
                 To celebrate “Deadpool & Wolverine,” we had Ryan Reynolds and Hugh Jackman play with puppies while answering questions.
@@ -177,9 +178,9 @@ const SpotlightSection: FC = () => {
             <SwiperSlide>
               <a href="https://www.youtube.com/watch?v=L6y8viGzWhI" target="_blank" rel="noopener noreferrer">
                 <div className="relative">
-                  <img src={img4.src} className="w-full h-auto rounded-md" alt="MTV Interview" />
-                  <img src={rectangle.src} className="absolute top-0 right-0 h-full w-1/3 opacity-80" alt="Overlay" />
-                  <img src={arrow.src} className="absolute top-1/2 right-10 transform -translate-y-1/2" alt="Arrow" />
+                  <Image src={img4} className="w-full h-auto rounded-md" alt="MTV Interview" />
+                  <Image src={rectangle} className="absolute top-0 right-0 h-full w-1/3 opacity-80" alt="Overlay" />
+                  <Image src={arrow} className="absolute top-1/2 right-10 transform -translate-y-1/2" alt="Arrow" />
                 </div>
               </a>
               <h3 className="font-bebas text-2xl mt-2 text-[#d3d3d3] text-center">
